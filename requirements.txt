@@ -1,6 +1,0 @@
-streamlit
-speechbrain
-torch
-torchaudio
-sounddevice
-scipy
