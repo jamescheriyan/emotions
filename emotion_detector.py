@@ -16,9 +16,9 @@ EMOTION_EMOJIS = {
     "fearful": "😨"
 }
 
-def detect_emotion(audio_path):
-    signal, fs = torchaudio.load(audio_path)
-    prediction = classifier.classify_file(audio_path)
+def detect_emotion(audio_file):
+    signal, fs = torchaudio.load(audio_file)
+    prediction = classifier.classify_file(audio_file)
     emotion = prediction[3]  # This is the predicted label
     emoji = EMOTION_EMOJIS.get(emotion.lower(), "❓")
     return emotion, emoji
